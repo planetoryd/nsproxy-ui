@@ -1,0 +1,6 @@
+[submodule "winit"]
+	path = winit
+	url = https://github.com/planetoryd/winit
+[submodule "egui"]
+	path = egui
+	url = https://github.com/planetoryd/egui

@@ -8,12 +8,14 @@ use egui_node_graph_example::NodeGraphExample;
 #[cfg(not(target_arch = "wasm32"))]
 fn main() {
     use eframe::egui::Visuals;
-
+    let options = eframe::NativeOptions {
+        ..Default::default()
+    };
     eframe::run_native(
         "Egui node graph example",
-        eframe::NativeOptions::default(),
+        options,
         Box::new(|cc| {
-            cc.egui_ctx.set_visuals(Visuals::dark());
+            // cc.egui_ctx.set_visuals(Visuals::dark());
             #[cfg(feature = "persistence")]
             {
                 Box::new(NodeGraphExample::new(cc))

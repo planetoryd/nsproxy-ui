@@ -9,13 +9,12 @@ keywords = ["ui", "egui", "graph", "node"]
 authors = ["setzer22"]
 edition = "2021"
 readme = "../README.md"
-workspace = ".."
 
 [features]
 persistence = ["serde", "slotmap/serde", "smallvec/serde", "egui/persistence"]
 
 [dependencies]
-egui = { version = "0.21.0" }
+egui = { path = "../egui/crates/egui" }
 slotmap = { version = "1.0" }
 smallvec = { version = "1.10.0" }
 serde = { version = "1.0", optional = true, features = ["derive"] }

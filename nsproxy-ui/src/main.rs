@@ -4,7 +4,6 @@
 
 use egui_node_graph_example::NodeGraphExample;
 
-// When compiling natively:
 #[cfg(not(target_arch = "wasm32"))]
 fn main() {
     use eframe::egui::Visuals;
@@ -12,10 +11,10 @@ fn main() {
         ..Default::default()
     };
     eframe::run_native(
-        "Egui node graph example",
+        "nsproxy",
         options,
         Box::new(|cc| {
-            // cc.egui_ctx.set_visuals(Visuals::dark());
+            cc.egui_ctx.set_visuals(Visuals::dark());
             #[cfg(feature = "persistence")]
             {
                 Box::new(NodeGraphExample::new(cc))
